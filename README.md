@@ -40,6 +40,12 @@ payroll_calculator/tests
 If you want to run the tests, you need to have installed pytest and positioned in the 
 above folder you can run pytest.
 
+To install pytest, you can run at the project root, with your virtual environment activated.
+
+```cmd
+pip install -r requirements.txt
+```
+
 DISCLAIMER:
 
 * I have built only happy path tests
