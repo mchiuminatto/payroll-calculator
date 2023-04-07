@@ -30,7 +30,7 @@ It has two main modules:
 
 The main.py module clearly reflects the system logic.
 
-I tried to follow as much as possible Clean Code an SOLID Principles.
+I have tried to follow as much as possible Clean Code an SOLID Principles.
 
 The working methodology was TDD. All the tests are include under the folder:
 
