@@ -1,8 +1,9 @@
 import abc
-from enum import Enum
-import logging
+
 
 from payroll_calculator.data_manager.data_manager_types import DataFileSource
+
+
 class DataLoader(abc.ABC):
 
     def __init__(self, source_descriptor: dict):

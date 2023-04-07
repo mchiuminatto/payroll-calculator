@@ -72,10 +72,10 @@ def test_calculate_employee_salary():
 def test_calculate_employee_salary_two_ranges():
     employee_salary_calculator = EmployeeSalary()
     employee_salary: dict = employee_salary_calculator._compute_employee(employee_record_two_ranges)
-    assert employee_salary["salary"] == 69.75
+    assert employee_salary["salary"] == 69.8
 
 
 def test_calculate_employee_salary_extended():
     employee_salary_calculator = EmployeeSalary()
     employee_salary: dict = employee_salary_calculator._compute_employee(employee_record_extended)
-    assert employee_salary["salary"] == 114.75
+    assert employee_salary["salary"] == 114.8

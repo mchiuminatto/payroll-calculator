@@ -43,13 +43,13 @@ class ParseWorkedDayData:
             time_to: str = match.group(3)
 
             worked_day: dict = {
-                                "weekday": WEEK_DAY_MAP[week_day],
-                                "time_from": time.strptime(time_from, "%H:%M"),
-                                "time_to": time.strptime(time_to, "%H:%M")
-                                }
+                "weekday": WEEK_DAY_MAP[week_day],
+                "time_from": time.strptime(time_from, "%H:%M"),
+                "time_to": time.strptime(time_to, "%H:%M")
+            }
             employee_record["data"].append(worked_day)
 
-        logging.info("Parsed working day %s", str(worked_day))
+        logging.info("Parsed working day for %s", name)
         return employee_record
 
     @staticmethod

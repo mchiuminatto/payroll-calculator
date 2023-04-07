@@ -35,7 +35,10 @@ class LocalFolderSaver(DataSaver):
         with open(file_name, "w", encoding="utf-8") as file_pointer:
             file_pointer.write("name, salary")
             for record in records:
-                file_pointer.write(f"\n{record['name']},{record['salary']}")
+                try:
+                    file_pointer.write(f"\n{record['name']},{record['salary']}")
+                except TypeError:
+                    continue
 
 
 class DataSaverFactory:

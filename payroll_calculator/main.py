@@ -2,14 +2,14 @@ import sys
 import os
 import logging
 from payroll_calculator.data_manager.load_data import (DataLoaderFactory,
-                                                       DataFileSource,
                                                        LocalFolderLoader)
 from payroll_calculator.payroll.payroll_calculator import EmployeeSalary
 from payroll_calculator.data_manager.transformations import ParseWorkedDayData
-from payroll_calculator.data_manager.save_data import DataSaverFactory, LocalFolderSaver
+from payroll_calculator.data_manager.save_data import DataSaverFactory
 from payroll_calculator.data_manager.data_manager_types import DataFileSource
 
 HELP_LINE = "python main.py <input_file_name> <output_file_name>"
+
 
 def load_data(file_path: str) -> list:
     data_loader: LocalFolderLoader = DataLoaderFactory(
@@ -35,7 +35,6 @@ def calculate_payroll(worked_days_data: list):
 
 
 def save_payroll(payroll: list, file_name: str):
-
     DataSaverFactory().get_saver(DataFileSource.LOCAL_FOLDER).save(payroll, file_name)
 
 
@@ -65,5 +64,3 @@ if __name__ == '__main__':
     payroll_file_name: str = sys.argv[2] if sys.argv[2] is not None else "payroll.txt"
 
     process_payroll(worked_days_file_name, payroll_file_name)
-
-

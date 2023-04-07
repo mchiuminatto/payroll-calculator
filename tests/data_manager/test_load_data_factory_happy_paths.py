@@ -19,5 +19,5 @@ def test_manage_heavy_load(gen_dummy_data):
     gen_dummy_data()
     loader: LocalFolderLoader = DataLoaderFactory(file_source_type=DataFileSource.LOCAL_FOLDER,
                                                   source_descriptor={"folder": DATA_FOLDER_PATH}).get_loader()
-    data: list = loader.load_data("workdays_heavy.txt")
+    data: list = loader.load_data(DATA_FOLDER_PATH+"workdays_heavy.txt")
     assert len(data) == constants.TEST_RECORDS
