@@ -6,13 +6,13 @@ This system calculates a payroll out from work a record input file.
 An input file format can be found at
 
 ```
-payroll_calculator_project/data/work_record.txt
+payroll_calculator/data/work_record.txt
 ```
 
 As well as the output file
 
 ```
-payroll_calculator_project/data/payroll.csv
+payroll_calculator/data/payroll.csv
 ```
 
 ## Approach
@@ -35,7 +35,7 @@ I have tried to follow as much as possible Clean Code an SOLID Principles.
 The working methodology was TDD. All the tests are include under the folder:
 
 ```
-payroll_calculator_project/tests
+payroll_calculator/tests
 ```
 If you want to run the tests, you need to have installed pytest and positioned in the 
 above folder you can run pytest.
@@ -71,7 +71,7 @@ sudo docker run -it --mount src=$(pwd)/data,target=/data,type=bind payroll
 This option will take as input the file _work_record.txt_, which is placed in the folder:
 
 ```
-payroll_calculator_project/data
+payroll_calculator/data
 ```
 
 You can change the input file at will, replacing the existing one.
@@ -81,7 +81,7 @@ You can change the input file at will, replacing the existing one.
 Using a local installation of python:
 
 1. Open a terminal
-2. Position yourself at root folder: payroll_calculator_project.
+2. Position yourself at root folder: payroll_calculator.
 3. Paste and run the following set of commands
 ```shell
 sudo chmod ugo+wr ./data/; # make sure have right permissions
@@ -94,7 +94,7 @@ You will se the result in the file payroll.csv
 ## Run using a local python or a virtual environment (MACOSX)
 
 1. Open a terminal
-2. Position yourself at root folder: payroll_calculator_project.
+2. Position yourself at root folder: payroll_calculator.
 3. Paste and run the following set of commands
 
 ```shell
